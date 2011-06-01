@@ -6,29 +6,31 @@
 #include "bell_options.h"
 
 class AudibleBell :
+    public PluginClassHandler<AudibleBell, CompScreen>,
     public ScreenInterface,
-	public PluginClassHandler<AudibleBell, CompScreen>,
-	public BellOptions
+    public BellOptions
 {
     public:
-		AudibleBell (CompScreen *screen);
-		~AudibleBell ();
-		
-		CompScreen      *screen;
-		ca_context *context;
 
-		void
-		handleEvent (XEvent *event);
-		
-		void
-		filenameChange (CompOption *option,
-			            Options    num);
+        AudibleBell (CompScreen *screen);
+        ~AudibleBell ();
+
+	bool bell ();
+
+    private:
+
+        ca_context *mCanberraContext;
+	CompString mFilename;
+	
+	void
+	filenameChange (CompOption *option,
+		        Options    num);
 };
 
 class BellPluginVTable :
-	public CompPlugin::VTableForScreen<AudibleBell>
+    public CompPlugin::VTableForScreen<AudibleBell>
 {
     public:
-		bool init ();
+        bool init ();
 };
 
