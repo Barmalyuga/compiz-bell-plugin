@@ -1,15 +1,19 @@
-Bell plugin for Compiz 0.9x
+* Bell plugin for Compiz 0.9x
 
 A simple plugin which lets Compiz make an audible bell sound whenever
 X causes the system bell event. Depends on libcanberra.
 
-How to build
+* How to build
 
 This assumes using a modern, supported version of Ubuntu (such as 11.04). First,
 install the dependencies.
 
   # apt-get install compiz-dev libcanberra-dev ccsm
   # apt-get build-dep compiz
+
+Builds are done out of tree using cmake, like with Compiz proper. If the above
+dependencies are met, these instructions should suffice without downloading
+the Compiz sourec code.
 
 Clone git repo and then cd into it. Then:
 
