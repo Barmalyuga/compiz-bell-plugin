@@ -11,17 +11,11 @@
             </relation>
         </deps>
         <options>
-            <option name="filename" type="string">
-		<_short>Bell sound file name</_short>
-		<_long>Name of file containing sound to play as bell</_long>
-		<default>/usr/share/sounds/ubuntu/stereo/bell.ogg</default>
-		<hints>file;</hints>
-	    </option>
-	    <option name="bell" type="bell">
-		<_short>Audible Bell</_short>
-		<_long>Play sound on system bell</_long>
-		<default>true</default>
-	    </option>
+    	    <option name="bell" type="bell">
+    		<_short>Audible Bell</_short>
+    		<_long>Play sound on system bell</_long>
+    		<default>true</default>
+    	    </option>
 	</options>
     </plugin>
 </compiz>

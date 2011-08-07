@@ -43,11 +43,6 @@ class AudibleBell :
     private:
 
         ca_context *mCanberraContext;
-	CompString mFilename;
-	
-	void
-	filenameChange (CompOption *option,
-		        Options    num);
 };
 
 class BellPluginVTable :
