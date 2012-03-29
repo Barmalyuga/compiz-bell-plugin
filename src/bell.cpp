@@ -33,7 +33,7 @@ AudibleBell::bell ()
     if ((error = ca_context_play (mCanberraContext, 0,
                               CA_PROP_EVENT_ID, "bell",
                               CA_PROP_CANBERRA_CACHE_CONTROL, "permanent",
-                              NULL)) < 0);
+                              NULL)) < 0)
     {
         compLogMessage ("bell", CompLogLevelWarn, "couldn't play bell - %s",
                     ca_strerror (error));
